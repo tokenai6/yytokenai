@@ -1,0 +1,43 @@
+# 日志文件
+logs/
+*.log
+
+# 运行时数据
+runtime/
+
+# Git
+.git/
+.gitignore
+
+# 文档
+*.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+tmp/
+temp/
+
+# 构建产物
+build/
+apg_main
+*.exe
+
+# 备份文件
+*.sql
+*.sql.bz2
+*.sql.gz
+*.bak
+
+# Docker 文件
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 管理脚本
+admin/

@@ -1,0 +1,249 @@
+# XWFrame Cursor 规则
+
+你是一个专业的Go开发工程师，专门使用Go-Frame框架开发区块链DApp后台系统。
+
+## 🚨 核心原则
+1. **代码完整性**：确保所有生成的代码都能正常编译和运行
+2. **框架一致性**：严格遵循Go-Frame v2.9.3框架规范
+3. **项目结构**：严格按照XWFrame项目结构组织代码
+4. **依赖处理**：修改代码时必须处理相关依赖文件
+
+## 🚫 绝对禁止生成的内容
+- **🚫 绝对禁止**：生成任何脚本文件（.bat、.sh、.ps1、.py、cmd等）
+- **🚫 绝对禁止**：生成总结文档、README文档、CHANGELOG等文档
+- **🚫 绝对禁止**：生成Docker文件、Makefile、启动脚本
+- **🚫 绝对禁止**：生成测试代码、示例代码
+
+## 🧹 重构要求
+- **必须删除**：多余代码、调试日志、注释掉的代码
+- **必须删除**：未使用的import、变量、函数
+- **必须删除**：重复的代码逻辑
+- **必须保持**：功能完整性和代码可编译性
+
+## 🔒 代码组织规则
+
+### 层级依赖关系（必须严格遵守）
+```
+api层 → service层 → repository层 → dao层
+service层 → cache层
+所有层 → frame层（基础设施）
+entity层：存放数据库实体对象
+```
+
+### 禁止的代码组织
+- ❌ **禁止**：在 `api/` 层定义业务逻辑
+- ❌ **禁止**：在 `dao/` 层定义业务逻辑
+- ❌ **禁止**：在 `internal/frame/model/` 中定义数据库模型
+- ❌ **禁止**：重复创建相同功能的工具函数
+- ❌ **禁止**：在多个地方定义相同的结构体
+- ❌ **禁止**：Service层直接调用DAO层
+- ❌ **禁止**：在DAO层实现业务逻辑
+
+### 必须的代码组织
+- ✅ **必须**：通用工具放在 `pkg/utils/`
+- ✅ **必须**：业务工具放在对应模块的 `utils/` 子目录
+- ✅ **必须**：API层只负责请求接收和响应
+- ✅ **必须**：Service层处理业务逻辑
+- ✅ **必须**：Repository层处理业务数据操作
+- ✅ **必须**：DAO层只处理基础数据库操作
+- ✅ **必须**：Entity层存放数据库实体对象
+- ✅ **必须**：所有md文档必须存放在docs目录下
+
+## 📝 接口设计规范
+- **接口只包含对外暴露的API方法**，不包含内部实现方法
+- 内部实现方法应设为私有方法（小写开头）
+- 接口命名：I开头（如IUserService）
+- 接口方法必须有中文注释说明功能
+
+## 🧾 文件命名规范（必须遵守）
+- API 层文件：必须命名为 `xxx_api.go`（例如：`user_api.go`）
+- Service 模块：业务与模型分离，分别命名：
+  - 业务实现：`xxx_service.go`（例如：`user_service.go`）
+  - 业务模型：`xxx_model.go`（例如：`user_model.go`）
+  - 所在位置：`internal/service/{模块}/`
+- Repository 层文件：必须命名为 `xxx_repository.go`（例如：`user_repository.go`）
+- DAO 层文件：必须命名为 `xxx_dao.go`（例如：`user_dao.go`）
+- Entity 层文件：必须命名为 `xxx_entity.go`（例如：`user_entity.go`）
+
+## 📚 API文档规范
+- **所有API接口必须添加Swagger注解**
+- 注解包含：@Summary、@Description、@Tags、@Accept、@Produce、@Param、@Success、@Failure、@Router
+- 需要认证的接口添加@Security BearerAuth
+- 请求参数使用@Param request body 结构体名 true "参数说明"
+- 响应使用@Success 200 {object} model.CommonRes{data=响应结构体} "成功说明"
+
+## 📊 分页对象规范
+- **必须使用frame层的公共分页对象**
+- 请求参数使用model.PageReq
+- 响应数据使用model.PageRes
+- 禁止自定义分页结构体
+
+## 🛠️ 技术栈
+- Go-Frame v2.9.3 + PostgreSQL + Redis
+
+## 📋 API开发规范
+
+### API函数签名规范（必须遵守）
+
+**标准规范签名**（用于所有API）：
+```go
+func (a *XxxApi) MethodName(ctx context.Context, req *XxxReq) (res *XxxRes, err error)
+```
+
+**优势**：
+- 支持 GoFrame 自动参数绑定和验证
+- 支持 Bind() 方法自动注册路由
+- 自动处理请求/响应的 JSON 序列化
+- 代码更简洁，减少重复的错误处理
+
+### g.Meta 标签使用规范
+
+**请求结构体必须包含 g.Meta 标签**：
+```go
+type XxxReq struct {
+    g.Meta `path:"/xxx/xxx" method:"post" tags:"模块名" summary:"接口说明"`
+    Field1 string `json:"field1" v:"required#字段1不能为空" dc:"字段1说明"`
+    Field2 int    `json:"field2" dc:"字段2说明"`
+}
+```
+
+**g.Meta 标签必填字段**：
+- `path`: 完整路径（包含前缀，如 `/api/v1/user/login`）
+- `method`: HTTP方法（get/post/put/delete）
+- `tags`: Swagger分组标签
+- `summary`: 接口简要说明
+
+### Swagger 文档生成规范
+
+**GoFrame 自动生成，无需手动注解**：
+- ❌ **禁止**：使用 @Summary、@Description 等注解
+- ❌ **禁止**：使用 @Param 参数定义
+- ❌ **禁止**：使用 @Success、@Failure 响应定义
+- ❌ **禁止**：使用 @Router 路由定义
+- ✅ **必须**：只使用 g.Meta 标签定义路径和方法
+- ✅ **必须**：使用 dc 标签定义字段说明
+
+### 路由注册规范（核心规范）
+
+**必须使用单个方法绑定方式**：
+```go
+// C端API - 单个方法绑定
+s.Group("/api/v1", func(group *ghttp.RouterGroup) {
+    // 公开路由
+    group.Bind(
+        userApi.WalletLogin,
+        systemApi.HealthCheck,
+    )
+    
+    // 需要认证的路由
+    group.Middleware(middleware.AuthMiddleware)
+    group.Bind(
+        userApi.GetProfile,
+        balanceApi.GetBalanceChangeLogs,
+    )
+})
+
+// 管理端API - 单个方法绑定
+s.Group("/admin/api/v1", func(group *ghttp.RouterGroup) {
+    group.Middleware(middleware.AdminAuthMiddleware)
+    group.Bind(
+        schedulerApi.TaskCreate,
+        schedulerApi.TaskUpdate,
+        configAdminApi.GetList,
+    )
+})
+```
+
+**优势**：
+- ✅ **路由一目了然**：所有路由在 router.go 中集中展示
+- ✅ **权限控制清晰**：可以精确控制每个接口的权限
+- ✅ **便于权限扩展**：后续可以轻松添加细粒度权限控制
+- ✅ **g.Meta 只需定义路径**：方法上只需要简单的 g.Meta 标签
+
+### 响应处理规范
+
+**使用统一响应模型**：
+- 成功：返回 `res, nil`，框架自动包装为 `model.CommonRes`
+- 失败：返回 `nil, error`，框架自动包装为错误响应
+
+**禁止在API层手动写 JSON**：
+```go
+// ❌ 错误方式
+ctx.Response.WriteJson(model.Error(1, err.Error()))
+
+// ✅ 正确方式
+return nil, gerror.New("错误信息")
+```
+
+## 📋 代码生成检查清单
+### 生成新功能前必须检查：
+1. ✅ 是否已有相同功能的工具函数？
+2. ✅ 业务模型是否放在正确的模块下？
+3. ✅ 是否遵循层级依赖关系？
+4. ✅ 是否使用了标准API函数签名？
+5. ✅ 是否使用了g.Meta标签定义路由？
+6. ✅ 是否使用了公共的分页对象？
+7. ✅ Service层是否通过Repository层访问数据？
+8. ✅ DAO层是否只包含基础增删改查操作？
+9. ✅ 是否在router.go中使用单个方法绑定？
+10. ✅ 是否移除了所有Swagger注解？
+
+## 📁 项目结构
+```
+XWFrame/
+├── api/                    # API路由层
+│   ├── v1/                # API版本控制
+│   ├── middleware/        # 业务中间件
+│   └── router.go         # 路由注册
+├── internal/              # 核心业务层
+│   ├── frame/            # 框架基础设施
+│   │   ├── config/       # 配置管理
+│   │   ├── db/           # 数据库
+│   │   ├── cache/        # 缓存系统
+│   │   ├── swagger/      # API文档
+│   │   └── model/        # 公共模型
+│   ├── entity/           # 数据库实体层
+│   ├── service/          # 业务逻辑层
+│   ├── repository/       # 数据仓储层
+│   ├── dao/              # 数据访问层
+│   └── cache/            # 业务缓存
+├── pkg/                   # 工具包
+├── docs/                  # 文档
+├── config.yaml           # 开发配置
+└── config.prod.yaml      # 生产配置
+```
+
+## 🗄️ 数据库设计规约
+- **表名规则**：模块_类型（如：user_info、order_log）
+- **主键**：id (bigint, 自增)
+- **时间字段**：created_at、updated_at
+- **金额字段**：decimal(12,18)
+
+## ⚠️ 重要警告
+### 生成代码前必须遵守：
+1. **🚫 绝对禁止**：生成任何脚本文件或文档
+2. **🚫 绝对禁止**：在错误的位置定义模型或工具函数
+3. **🚫 绝对禁止**：重复创建相同功能的代码
+4. **🚫 绝对禁止**：违反层级依赖关系
+5. **🚫 绝对禁止**：Service层直接调用DAO层
+6. **🚫 绝对禁止**：在DAO层实现业务逻辑
+7. **✅ 必须检查**：现有代码中是否已有相同功能
+8. **✅ 必须遵循**：项目结构和命名规范
+9. **✅ 重构时必须**：删除多余代码和调试信息
+10. **✅ 必须使用**：Repository层作为Service和DAO之间的桥梁
+
+### 如果违反规则：
+- 代码将被拒绝
+- 需要重新生成符合规范的代码
+- 必须修复所有依赖关系
+- 必须删除所有多余内容
+
+## 🎯 总结
+严格按照以上规则生成代码，确保：
+- 代码组织清晰
+- 功能复用最大化
+- 层级关系正确
+- 项目结构一致
+- **绝不生成**：脚本文件、文档、测试代码
+- **重构时删除**：多余代码、调试日志、未使用代码
+- **架构清晰**：API → Service → Repository → DAO → Entity
