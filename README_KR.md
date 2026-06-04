@@ -1,7 +1,7 @@
 # TokenAI
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAI logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAI logo" width="88" />
   <h3>세계 최초의 온체인 집계 거래 플랫폼</h3>
   <p>실물 자산, 온체인 매핑, 집계 거래, 글로벌 유동성 네트워크를 하나로 연결하는 통합 백엔드 인프라</p>
 </div>
@@ -86,7 +86,7 @@ TokenAi는 `실물 자산 디지털화`, `온체인 매핑`, `집계 거래`, `�
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
 </div>
 
 ---

@@ -1,7 +1,7 @@
 # TokenAi
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAi logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAi logo" width="88" />
   <h3>全球首个链上聚合交易平台</h3>
   <p>连接真实资产、链上映射、聚合交易与全球流动性网络的统一后端基础设施</p>
 </div>
@@ -19,7 +19,7 @@
   <img src="https://img.shields.io/badge/Custody-Cobo%20WaaS-f59e0b" alt="Cobo WaaS" />
 </p>
 
-![TokenAi overview](TokenAi聚合交易平台_files/TokenAI-Shang-Ye-Ji-Hua-Shu.png)
+![TokenAi overview](tokenai_media/TokenAI-Shang-Ye-Ji-Hua-Shu.png)
 
 <div align="center">
   <strong>链接全球资本</strong> · <strong>聚合多渠道交易</strong> · <strong>构建更高效的数字资产协同入口</strong>
@@ -44,7 +44,7 @@ TokenAi 是一套围绕 `真实资产数字化`、`链上映射`、`聚合交易
 <table>
   <tr>
     <td width="56%">
-      <img src="TokenAi聚合交易平台_files/Yi-Tu-Du-DongTokenAI.png" alt="一图读懂 TokenAi" />
+      <img src="tokenai_media/Yi-Tu-Du-DongTokenAI.png" alt="一图读懂 TokenAi" />
     </td>
     <td width="44%">
       <h3>不是再做一个单点交易工具</h3>
@@ -84,7 +84,7 @@ TokenAi 是一套围绕 `真实资产数字化`、`链上映射`、`聚合交易
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAi 品牌主视觉角色" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAi 品牌主视觉角色" width="860" />
 </div>
 
 ---

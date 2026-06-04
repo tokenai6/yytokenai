@@ -1,7 +1,7 @@
 # TokenAI
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAI logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAI logo" width="88" />
   <h3>The World's First On-Chain Aggregated Trading Platform</h3>
   <p>A unified backend infrastructure for real-world asset mapping, custody, aggregated trading, and global liquidity coordination</p>
 </div>
@@ -86,7 +86,7 @@ From the current project shape, this is clearly more than a landing-page concept
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
 </div>
 
 ---

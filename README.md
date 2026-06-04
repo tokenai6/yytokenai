@@ -1,7 +1,7 @@
 # TokenAi
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAi logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAi logo" width="88" />
   <h3>The World's First On-Chain Aggregated Trading Platform</h3>
   <p>A unified backend infrastructure for real-world asset mapping, custody, aggregated trading, and global liquidity coordination</p>
 </div>
@@ -19,7 +19,7 @@
   <img src="https://img.shields.io/badge/Custody-Cobo%20WaaS-f59e0b" alt="Cobo WaaS" />
 </p>
 
-![TokenAi overview](TokenAi聚合交易平台_files/TokenAI-Shang-Ye-Ji-Hua-Shu.png)
+![TokenAi overview](picture1.png)
 
 <div align="center">
   <strong>Connect global capital</strong> · <strong>Aggregate multi-channel trading</strong> · <strong>Create a more efficient digital asset coordination layer</strong>
@@ -44,7 +44,7 @@ From the current project shape, this is clearly more than a landing-page concept
 <table>
   <tr>
     <td width="56%">
-      <img src="TokenAi聚合交易平台_files/Yi-Tu-Du-DongTokenAI.png" alt="TokenAi one pager" />
+      <img src="picture2.png" alt="TokenAi one pager" />
     </td>
     <td width="44%">
       <h3>Not another isolated trading tool</h3>
@@ -84,7 +84,7 @@ From the current project shape, this is clearly more than a landing-page concept
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAi brand visual" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAi brand visual" width="860" />
 </div>
 
 ---

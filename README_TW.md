@@ -1,7 +1,7 @@
 # TokenAI
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAI logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAI logo" width="88" />
   <h3>全球首個鏈上聚合交易平台</h3>
   <p>連接真實資產、鏈上映射、聚合交易與全球流動性網路的統一後端基礎設施</p>
 </div>
@@ -86,7 +86,7 @@ TokenAI 是一套圍繞 `真實資產數位化`、`鏈上映射`、`聚合交易
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAI 品牌主視覺角色" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAI 品牌主視覺角色" width="860" />
 </div>
 
 ---

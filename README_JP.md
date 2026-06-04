@@ -1,7 +1,7 @@
 # TokenAI
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAI logo" width="88" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAI logo" width="88" />
   <h3>世界初のオンチェーン集約取引プラットフォーム</h3>
   <p>実物資産、オンチェーンマッピング、集約取引、グローバル流動性ネットワークを一体化する統合バックエンド基盤</p>
 </div>
@@ -86,7 +86,7 @@ TokenAI は、`実物資産のデジタル化`、`オンチェーンマッピン
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAI brand visual" width="860" />
 </div>
 
 ---

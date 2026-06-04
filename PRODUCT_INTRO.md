@@ -1,13 +1,13 @@
 # TokenAi 聚合交易平台
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/TokenAI-logo.png" alt="TokenAi Logo" width="84" />
+  <img src="tokenai_media/TokenAI-logo.png" alt="TokenAi Logo" width="84" />
   <h1>把交易入口、行情判断与运维响应，收拢到同一个工作台</h1>
   <p><strong>面向专业交易场景的一体化聚合交易平台</strong></p>
   <p>统一接入多交易渠道，集中完成交易执行、订单追踪、实时行情查看与运维支撑。</p>
 </div>
 
-![TokenAi 主视觉](TokenAi聚合交易平台_files/TokenAI-Shang-Ye-Ji-Hua-Shu.png)
+![TokenAi 主视觉](tokenai_media/TokenAI-Shang-Ye-Ji-Hua-Shu.png)
 
 <div align="center">
   <strong>链接全球资本</strong> · <strong>聚合多渠道交易</strong> · <strong>构建更高效的数字资产协同入口</strong>
@@ -20,7 +20,7 @@
 <table>
   <tr>
     <td width="56%">
-      <img src="TokenAi聚合交易平台_files/Yi-Tu-Du-DongTokenAI.png" alt="一图读懂 TokenAi" />
+      <img src="tokenai_media/Yi-Tu-Du-DongTokenAI.png" alt="一图读懂 TokenAi" />
     </td>
     <td width="44%">
       <h3>不是再做一个单点交易工具</h3>
@@ -60,7 +60,7 @@
 </table>
 
 <div align="center">
-  <img src="TokenAi聚合交易平台_files/Niu-NiuIP-1.png" alt="TokenAi 品牌主视觉角色" width="860" />
+  <img src="tokenai_media/Niu-NiuIP-1.png" alt="TokenAi 品牌主视觉角色" width="860" />
 </div>
 
 ---
@@ -142,7 +142,7 @@
 品牌不只是一个标志，更是一套完整的识别系统。  
 TokenAi 在对外介绍、合作沟通与线下展示中，具备更统一的品牌形象表达。
 
-![TokenAi Brand IP](TokenAi聚合交易平台_files/TokenAI-IP-San-Shi-Tu.png)
+![TokenAi Brand IP](tokenai_media/TokenAI-IP-San-Shi-Tu.png)
 
 ---
 
@@ -150,7 +150,7 @@ TokenAi 在对外介绍、合作沟通与线下展示中，具备更统一的品
 
 通过视觉系统与应用物料延展，TokenAi 可以在官网、活动、招商与品牌传播场景中保持一致的识别感。
 
-![TokenAi 品牌应用](TokenAi聚合交易平台_files/TokenAI-Pin-PaiVI-Ji-Chu-Shou-Ce_20.png)
+![TokenAi 品牌应用](tokenai_media/TokenAI-Pin-PaiVI-Ji-Chu-Shou-Ce_20.png)
 
 ---
 
@@ -159,7 +159,7 @@ TokenAi 在对外介绍、合作沟通与线下展示中，具备更统一的品
 产品介绍页不仅要表达功能，也需要给合作方足够的信任感。  
 这部分适合用于对外沟通、资料发送、项目介绍或品牌背书场景。
 
-![TokenAi 资料展示](TokenAi聚合交易平台_files/Zheng-Shu.png)
+![TokenAi 资料展示](tokenai_media/Zheng-Shu.png)
 
 > 如用于正式对外材料，建议结合实际合规口径补充对应说明。
 
