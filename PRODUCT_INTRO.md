@@ -142,7 +142,7 @@
 品牌不只是一个标志，更是一套完整的识别系统。  
 TokenAi 在对外介绍、合作沟通与线下展示中，具备更统一的品牌形象表达。
 
-![TokenAi Brand IP](tokenai_media/TokenAI-IP-San-Shi-Tu.png)
+![TokenAi Brand IP](tokenai_media/bow.jpg)
 
 ---
 
@@ -150,7 +150,7 @@ TokenAi 在对外介绍、合作沟通与线下展示中，具备更统一的品
 
 通过视觉系统与应用物料延展，TokenAi 可以在官网、活动、招商与品牌传播场景中保持一致的识别感。
 
-![TokenAi 品牌应用](tokenai_media/TokenAI-Pin-PaiVI-Ji-Chu-Shou-Ce_20.png)
+![TokenAi 品牌应用](tokenai_media/cup.jpg)
 
 ---
 
